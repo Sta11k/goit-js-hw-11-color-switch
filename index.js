@@ -14,6 +14,10 @@ const randomIntegerFromInterval = (min, max) => {
  
 };
 
+//фн старт зміни кольорів + блок кнопки старт
+//Використати функцію setInterval з часом 1000млс
+//фн зупинки зміни кольорів + блокування кнопки стоп
+//
 const startRef = document.querySelector('button[data-action="start"]');
 const stopRef = document.querySelector('button[data-action="stop"]');
 const bodyRef = document.querySelector('body');
@@ -22,19 +26,21 @@ const bodyRef = document.querySelector('body');
 function switchColor(e) {
   
   
-  const cologBg = colors[`${randomIntegerFromInterval()}`];
-  bodyRef.style.backgroundColor = `${cologBg}`;
- 
-  startRef.setAttribute("disabled", "true");
+  // const cologBg = colors[`${randomIntegerFromInterval()}`];
+   startRef.setAttribute("disabled", "true");
+  return timerId = setTimeout(()=> {
+  cologBg = colors[`${randomIntegerFromInterval()}`];
+  bodyRef.style.backgroundColor = `${cologBg}`;}, 200);
+// startRef.classList.add("pointer-events");
 
-
- // startRef.classList.add("pointer-events");
-
- 
   ;}
 
-
+https://youtu.be/jMNproAL94I?t=1395
 startRef.addEventListener('click', switchColor);
+
+
+
+
 // startRef.addEventListener('click', event => {
 //   event.target = true;
 
