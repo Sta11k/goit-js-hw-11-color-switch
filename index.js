@@ -25,10 +25,11 @@ stopRef.addEventListener('click', stopSwitchColor);
 
 
 function startSwitchColor(e) {
-  // startRef.setAttribute("disabled", "true");
-  
-  startRef.classList.add("pointer-events");
-  stopRef.classList.remove("pointer-events");
+  startRef.setAttribute("disabled", "true");
+  stopRef.removeAttribute("disabled", "true");
+ 
+  // startRef.classList.add("pointer-events");
+  // stopRef.classList.remove("pointer-events");
   
     function setColor() {
     const cologBg = colors[`${randomIntegerFromInterval()}`];
@@ -44,10 +45,13 @@ function startSwitchColor(e) {
 function stopSwitchColor(e) {
  
   clearTimeout(timerId);
-   startRef.classList.remove("pointer-events");
-  stopRef.classList.add("pointer-events");
-  //  stopRef.setAttribute("disabled", "true");
-  // startRef.setAttribute("disabled", "false");
+  //  startRef.classList.remove("pointer-events");
+  // stopRef.classList.add("pointer-events");
+ 
+  stopRef.setAttribute("disabled", "true");
+  
+  startRef.removeAttribute("disabled", "true");
+ 
 };
 
 
