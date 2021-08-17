@@ -42,9 +42,10 @@ function startSwitchColor(e) {
 ;}
 
 function stopSwitchColor(e) {
-  startRef.classList.remove("pointer-events");
-  stopRef.classList.add("pointer-events");
+ 
   clearTimeout(timerId);
+   startRef.classList.remove("pointer-events");
+  stopRef.classList.add("pointer-events");
   //  stopRef.setAttribute("disabled", "true");
   // startRef.setAttribute("disabled", "false");
 };

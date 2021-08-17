@@ -4,5 +4,5 @@ body {
 }
 .pointer-events {
   pointer-events: none;
-  background-color: silver;
+  background-color: rgb(204, 200, 200);
 }
